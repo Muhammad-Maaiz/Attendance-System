@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Attandence</title>
+    <link rel="stylesheet" href="{% static 'attandence.css' %}">
+
+</head>
+<body>
+    <div class="attendance-container">
+        <h1>HMSM Innovatech</h1>
+        <h3>Mark Your Attendance</h3>
+        <p>Office hours: 7:00 PM - 9:00 PM</p>
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit">Mark Attendance</button>
+            <p> {{ message }}</p>
+        </form>
+    </div>
+</body>
+</html>
